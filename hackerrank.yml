@@ -1,0 +1,15 @@
+version: 1.0
+configuration:
+  has_webserver: false
+  scoring:
+    command: "cd JavaSpringBootSample; mvn clean test"
+    files:
+      - "JavaSpringBootSample/target/customReports/result.xml"
+  ide_config:
+    default_open_files:
+      - JavaSpringBootSample/src/main/java/com/hackerrank/sample/controller/ModelController.java
+      - JavaSpringBootSample/src/main/java/com/hackerrank/sample/model/Model.java
+    project_menu:
+      run: "cd JavaSpringBootSample; mvn clean spring-boot:run"
+      install: "cd JavaSpringBootSample; mvn clean install"
+      test: "cd JavaSpringBootSample; mvn clean test; cat target/customReports/result.txt"
